@@ -11,13 +11,17 @@
     - "Valor Inválido!"
     conforme o caso.
     */
+    const turno = prompt(`Informe o turno no qual você estuda (M-matutino ou V-Vespertino ou N- Noturno.): `).toUpperCase().trim();
 
-    //ENTRADA
-    
-    
-    //PROCESSAMENTO
-
-    
-    //SAÍDA
-
+    switch (turno) {
+        case "M":
+            document.write("Bom dia!");
+            break;
+        case "V":
+            document.write("Boa tarde!");
+            break;
+        case "N":
+            document.write("Boa noite!");
+            break;
+    }
 </script>

@@ -8,13 +8,25 @@
     - até 1500(inclusive): aumento de 10 %
     - acima de 1500: aumento de 5 %
     */
+    const preco = Number(prompt(`Informe o preço do produto: `));
+    let aumento = 0;
+    let valorTotal = 0;
 
-    //ENTRADA
-
-    
-    //PROCESSAMENTO
-
-    
-    //SAÍDA
-
+    if (preco <= 280) {
+        aumento = preco * 0.2;
+        valorTotal = aumento + preco;
+        alert(`O aumento foi de R$${aumento.toFixed(2).replace(".", ",")}. O valor final do produto é R$${valorTotal.toFixed(2).replace(".", ",")}.`);
+    } else if (preco <= 700) {
+        aumento = preco * 0.15;
+        valorTotal = aumento + preco;
+        alert(`O aumento foi de R$${aumento.toFixed(2).replace(".", ",")}. O valor final do produto é R$${valorTotal.toFixed(2).replace(".", ",")}.`);
+    } else if (preco <= 1500) {
+        aumento = preco * 0.1;
+        valorTotal = aumento + preco;
+        alert(`O aumento foi de R$${aumento.toFixed(2).replace(".", ",")}. O valor final do produto é R$${valorTotal.toFixed(2).replace(".", ",")}.`)
+    } else {
+        aumento = preco * 0.05;
+        valorTotal = aumento + preco;
+        alert(`O aumento foi de R$${aumento.toFixed(2).replace(".", ",")}. O valor final do produto é R$${valorTotal.toFixed(2).replace(".", ",")}.`)
+    }
 </script>

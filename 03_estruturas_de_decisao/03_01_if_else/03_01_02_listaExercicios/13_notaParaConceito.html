@@ -10,13 +10,17 @@
     Entre 6.9 e 6.0             D
     Entre 5.9 e zero            E
     */
-
-    //ENTRADA
-
+    const nota = Number(prompt("Informe a nota desejada: "));
     
-    //PROCESSAMENTO
-
-    
-    //SAÍDA
-
+    if (nota <= 10.0 && nota >= 9.0) {
+        alert(`${nota}: A`)
+    } else if (nota <= 8.9 && nota >= 8.0) {
+        alert(`${nota}: B`)
+    } else if (nota <= 7.9 && nota >= 7.0) {
+        alert(`${nota}: C`)
+    } else if (nota <= 6.9 && nota >= 6.0) {
+        alert(`${nota}: D`)
+    } else {
+        alert(`${nota}: E`)
+    }
 </script>

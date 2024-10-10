@@ -9,13 +9,16 @@
     12 = 1 dezena e 2 unidades
     Testar com: 326, 300, 100, 320, 310,305, 301, 101, 311, 111, 25, 20, 10, 21, 11, 1, 7 e 16
     */
+    const number = Number(prompt(`Informe um número menor que 1000: `));
+    let cen, dez, uni = 0;
 
-    //ENTRADA
-
-
-    //PROCESSAMENTO
-
-    
-    //SAÍDA
-
+    if (number > 0 && number < 1000) {
+        cen = Math.trunc(number / 100);
+        dez = Math.trunc((number % 100) / 10);
+        uni = Math.trunc((number % 100) % 10);
+        
+        alert(`${number}: ${cen} centenas, ${dez} dezenas e ${uni} unidades.`);
+    } else {
+        alert(`Valor inválido, certifique-se de adicionar um número maior que 0 e menor que 1000!`)
+    }
 </script>

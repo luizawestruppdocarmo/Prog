@@ -11,13 +11,18 @@
     conforme o caso.
     */
 
-    //ENTRADA
-
+    const turno = prompt(`Em qual turno você estuda? (Digite M-matutino, V-Vespertino ou N-Noturno)`).toUpperCase().trim();
     
-    //PROCESSAMENTO
-
-    
-    //SAÍDA
-    
-
+    if (turno == M) {
+        alert(`Bom dia!`);
+    }
+    else if (turno == V) {
+        alert(`Boa tarde!`);
+    }
+    else if (turno == N) {
+        alert(`Boa noite!`);
+    }
+    else {
+        alert(`Valor Inválido!`)
+    }
 </script>

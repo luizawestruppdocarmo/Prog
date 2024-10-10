@@ -3,13 +3,38 @@
     PROBLEMA: ORDEM DECRESCENTE
     Faça um script que leia três números e mostre-os em ordem decrescente.
     */
-
-    //ENTRADA
-
+        const num1 = Number(prompt(`Informe um número: `))
+        const num2 = Number(prompt(`Informe outro número: `));
+        const num3 = Number(prompt(`Por fim, informe um último número: `));
+        let maior, menor, meio = 0;
     
-    //PROCESSAMENTO
-    
-
-    //SAÍDA
-    
-</script>
+        if (num1 > num2 && num1 > num3) {
+            maior = num1;
+            if (num2 < num3) {
+                menor = num2;
+                meio = num3;
+            } else {
+                menor = num3;
+                meio = num2;
+            }
+        } else if (num1 < num2 && num1 < num3) {
+            menor = num1
+            if (num2 > num3) {
+                maior = num2;
+                meio = num3;
+            } else {
+                maior = num3;
+                meio = num2;
+            }
+        } else {
+            meio = num1;
+            if (num2 > num3) {
+                maior = num2;
+                menor = num3;
+            } else {
+                maior = num3;
+                meio = num2;
+            }
+        }
+        alert(`A sequência, em ordem decrescente é: ${maior}, ${meio}, ${menor}`)
+    </script>

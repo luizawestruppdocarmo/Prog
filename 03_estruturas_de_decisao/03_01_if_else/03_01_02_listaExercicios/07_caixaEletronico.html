@@ -5,14 +5,49 @@
 
     Exemplo: Para sacar a quantia de 256 reais, o script fornece duas notas de 100, uma nota de 50, uma nota de 5 e uma nota de 1;
     Exemplo: Para sacar a quantia de 399 reais, o script fornece três notas de 100, uma nota de 50, quatro notas de 10, uma nota de 5 e quatro notas de 1.
+    326, 300, 100, 320, 310,305, 301, 101, 311, 111, 25, 20, 10, 21, 11, 1, 7 e 16
     */
 
-    //ENTRADA
+    const numero = Number(prompt(`Informe um valor entre 10 e 600 reais: `));
+    let notaCem, notaCinquenta, notaDez, notaCinco, notaUm = 0;
 
-    
-    //PROCESSAMENTO
+    if(numero > 600) {
+       alert(`O valor é inválido, certifique-se de digitar um número até 600!`)
+    } else if (numero >= 100) {
+        notaCem = Math.floor(numero / 100);
+        notaCinquenta = Math.floor((numero - (notaCem * 100)) / 50);
+        notaDez = Math.floor((numero - ((notaCem * 100) + (notaCinquenta * 50))) / 10);
+        notaCinco = Math.floor((numero - ((notaCem * 100) + (notaCinquenta * 50) + (notaDez * 10))) / 5);
+        notaUm = Math.floor((numero - ((notaCem * 100) + (notaCinquenta * 50) + (notaDez * 10) + (notaCinco * 5))));
+            
+        alert(`Notas fornecidas: ${notaCem} notas de 100 reais, ${notaCinquenta} notas de 50 reais, ${notaDez} notas de 10 reais, ${notaCinco} notas de 5 reais e ${notaUm} notas 1 real.`)
+    } else if (numero >= 50) {
+        notaCinquenta = Math.floor(numero / 50);
+        notaDez = Math.floor((numero - (notaCinquenta * 50)) / 10);
+        notaCinco = Math.floor((numero - ((notaCinquenta * 50) + (notaDez * 10))) / 5);
+        notaUm = Math.floor(numero - ((notaCinquenta * 50) + (notaDez * 10) + (notaCinco * 5)));
+            
+        alert(`Notas fornecidas: ${notaCinquenta} notas de 50 reais, ${notaDez} notas de 10 reais, ${notaCinco} notas de 5 reais e ${notaUm} notas 1 real.`)
+    } else if (numero >= 10) {
+        notaDez = Math.floor(numero / 10);
+        notaCinco = Math.floor((numero - (notaDez * 10)) / 5);
+        notaUm = Math.floor(numero - ((notaDez * 10) + (notaCinco * 5)));
+            
+        alert(`Notas fornecidas: ${notaDez} notas de 10 reais, ${notaCinco} notas de 5 reais e ${notaUm} notas 1 real.`)
+    } else if (numero >= 5) {
+        notaCinco = Math.floor(numero / 5);
+        notaUm = Math.floor(numero - (notaCinco * 5));
+        alert(`Notas fornecidas: ${notaCinco} notas de 5 reais e ${notaUm} notas 1 real.`)
+    } else {
+        notaUm = Math.floor(numero);
+        alert(`Notas fornecidas: ${notaUm} notas 1 real.`)
+    }
 
-    
-    //SAÍDA
-
+    /*
+     const notaCem = Math.floor(numero / 100);
+        const notaCinquenta = Math.floor((numero - (notaCem * 100)) / 50);
+        const notaDez = Math.floor((numero - ((notaCem * 100) + (notaCinquenta * 50))) / 10);
+        const notaCinco = Math.floor((numero - ((notaCem * 100) + (notaCinquenta * 50) + (notaDez * 10))) / 5);
+        const notaUm = Math.floor((numero - ((notaCem * 100) + (notaCinquenta * 50) + (notaDez * 10) + (notaCinco * 5))));
+        */
 </script>
