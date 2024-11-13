@@ -4,13 +4,8 @@
     PROBLEMA: VOGAL
     Construa um programa que leia um caractere e informe se este caractere é uma vogal.
     */
-
-    //ENTRADA
-
-
-    //PROCESSAMENTO
-
-    
-    //SAÍDA
-
+    const caractere = prompt(`Digite um caractere: `);
+    let mensagem = "";
+    (caractere == "a" || caractere == "e" || caractere == "i" || caractere == "o" || caractere == "u") ? mensagem = `${caractere} é uma vogal.` : mensagem = `${caractere} é qualquer outra coisa, menos uma vogal.`;
+    document.write(`${mensagem}`);
 </script>
