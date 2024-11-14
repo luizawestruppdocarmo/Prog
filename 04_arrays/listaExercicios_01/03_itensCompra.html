@@ -9,13 +9,18 @@
     As bebidas a serem compradas são: bebida1, bebida2, bebida3.
     A lista completa de compras é: fruta1, fruta2, fruta3, bebida1, bebida2, bebida3.
     */
+    const fruta1 = prompt(`Insira uma fruta: `);
+    const fruta2 = prompt(`Insira outra fruta: `);
+    const fruta3 = prompt(`Insira uma última fruta: `);
 
-    //ENTRADA
+    const bebida1 = prompt(`Insira uma bebida: `);
+    const bebida2 = prompt(`Insira outra bebida: `);
+    const bebida3 = prompt(`Insira uma última bebida: `);
 
-
-    //PROCESSAMENTO
-
-
-    //SAÍDA
-
-</script>
+    const frutas = [fruta1, fruta2, fruta3];
+    document.write("As frutas a serem compradas são: " + frutas.join(" - "));
+    const bebidas = [bebida1, bebida2, bebida3];
+    document.write("As bebidas a serem compradas são: " + bebidas.join(" - "));
+    const listaCompleta = frutas.concat(bebidas);
+    document.write("A lista completa de compras é: " + listaCompleta.join(" - "));
+    </script>
