@@ -5,12 +5,18 @@
     // let listaDeNumeros = [1, 4, 6, 8, 898, 7, 43, 2980, 3500, 10];
     //Faça um programa que identifique os números pares e apresente-os ao fim do programa, ordenados de forma crescente.
 
-    //ENTRADA
-
+    let listaDeNumeros = [1, 4, 6, 8, 898, 7, 43, 2980, 3500, 10];
+    let pares = [];
     
-    //PROCESSAMENTO
+    for (const num of listaDeNumeros) {
+        if (num % 2 == 0) {
+            pares.push(num)
+        }
+    }
 
+    function organizando (a, b) {
+        return a - b;
+    }
 
-    //SAÍDA
-
+    document.write(`${pares.sort(organizando).join(" - ")}`);
 </script>
