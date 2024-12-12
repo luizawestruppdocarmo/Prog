@@ -9,12 +9,25 @@
     **Apresente apenas letras minúsculas!
     */
 
-    //ENTRADA
+    // ENTRADA
+    let listaDeLetras = ["a", "b", "d", "e", "E", "F", "C", "U", "u", "e", "W", "D"];
 
-    
-    //PROCESSAMENTO
+    // PROCESSAMENTO
+    let letrasUnicas = [];
+    let letrasMin = listaDeLetras.map(letra => letra.toLowerCase());
 
-    
-    //SAÍDA
+    for (let i = 0; i < letrasMin.length; i++) {
+        if (!letrasUnicas.includes(letrasMin[i])) {
+            letrasUnicas.push(letrasMin[i]);
+        }
+    }
+
+    letrasUnicas.sort();
+
+    // SAÍDA
+    document.write("Letras únicas em ordem alfabética: ");
+    for (let i = 0; i < letrasUnicas.length; i++) {
+        document.write(letrasUnicas[i] + " ");
+    }
 
 </script>
